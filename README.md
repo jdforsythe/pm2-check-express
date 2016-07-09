@@ -51,8 +51,12 @@ This will expose:
       firstStart: '07/01/2016 6:44 pm',
       firstStartAgo: '8 days ago',
       httpLatency: 155,
-      loopDelay: {},
+      loopDelay: {
+        value: "5.1ms",
+        agg_type: "avg",
+        alert: {}
+      },
       restarts: 1,
-      memory: 22,
+      memory: 45596672,
       cpu: 12
     }
