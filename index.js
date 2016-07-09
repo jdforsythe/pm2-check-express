@@ -11,7 +11,7 @@ const cpuPercent = require('cpu-pct');
  * @param {Express} expressApp - an instance of express()
  * @param {Object} opts - the options
  * @param {string} [opts.healthUrl="/health"] - the URL endpoint for quick health status
- * @param {string} [opts.statusUrl="/stats"] - the URL endpoint for full statistics
+ * @param {string} [opts.statsUrl="/stats"] - the URL endpoint for full statistics
  * @param {string} [opts.timestampFormat="MM/DD/YY h:mm:ss a"] - momentjs timestamp string to use for uptime output
  */
 module.exports = function(expressApp, opts) {
@@ -86,7 +86,7 @@ module.exports = function(expressApp, opts) {
             firstStartAgo: _getSince(p.pm2_env.created_at),
             httpLatency: p.pm2_env.axm_options.http_latency,
             loopDelay: p.pm2_env.axm_monitor['Loop delay'],
-            unstable_restarts: p.pm2_env.unstable_restarts,
+            restarts: p.pm2_env.unstable_restarts,
             memory: p.monit.memory,
             cpu: p.monit.cpu,
           };
