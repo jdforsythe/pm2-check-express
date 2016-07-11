@@ -59,4 +59,5 @@ This will expose:
       restarts: 1,
       memory: 45596672,
       cpu: 12
-    }
+    ]
+  }
